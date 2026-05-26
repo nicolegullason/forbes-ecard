@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --navy-deep: #080f24;
+  --navy-base: #0d1b3e;
+  --navy-mid: #0f1e47;
+  --navy-light: #1a2f5c;
+  --text-white: #ffffff;
+}
+
+body {
+  background-color: var(--navy-deep);
+  color: var(--text-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* Swoosh / diagonal-streaks background */
+.bg-swoosh {
+  background-color: #0d1b3e;
+  background-image:
+    linear-gradient(142deg, rgba(40, 80, 180, 0.18) 0%, transparent 45%),
+    linear-gradient(220deg, rgba(20, 50, 120, 0.22) 0%, transparent 55%),
+    linear-gradient(310deg, rgba(10, 30, 90, 0.18) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-swoosh::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 70%;
+  height: 130%;
+  background: linear-gradient(155deg, transparent 35%, rgba(60, 110, 220, 0.07) 55%, transparent 75%);
+  pointer-events: none;
+  transform: skewX(-5deg);
+}
+
+.bg-swoosh::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 80%;
+  height: 110%;
+  background: linear-gradient(150deg, transparent 40%, rgba(40, 90, 200, 0.05) 60%, transparent 80%);
+  pointer-events: none;
+  transform: skewX(-8deg);
+}
+
+/* City skyline overlay */
+.bg-city {
+  background-color: #1a2f5c;
+  background-image: url('/images/city-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bg-city::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 30, 80, 0.7);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-city > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient transition between sections */
+.section-fade-top {
+  background: linear-gradient(to bottom, #080f24 0%, #0d1b3e 100%);
+}
+
+/* Service cards */
+.service-card {
+  background: rgba(15, 25, 70, 0.75);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+}
+
+/* Pill buttons */
+.btn-navy {
+  background: rgba(45, 65, 120, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  border-radius: 9999px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-navy:hover {
+  background: rgba(60, 85, 155, 0.95);
+}
+
+/* Heart clip-path */
+.heart-wrap {
+  width: 210px;
+  height: 210px;
+  position: relative;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.heart-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: url(#heartClip);
+}
+
+/* Placeholder heart (when no image) */
+.heart-placeholder {
+  width: 210px;
+  height: 210px;
+  background: rgba(30, 50, 120, 0.5);
+  border: 2px dashed rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  text-align: center;
+  clip-path: url(#heartClip);
+}
+
+/* Chevron bounce */
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.chevron-bounce { animation: bounceDown 2s ease-in-out infinite; }
+
+/* Header rule */
+.header-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Mobile: stack cards */
+@media (max-width: 768px) {
+  .service-card { padding: 1.5rem 1.25rem; }
+  .btn-navy { width: 100%; }
+}
