@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --navy-deep: #080f24;
-  --navy-base: #0d1b3e;
-  --navy-mid: #0f1e47;
-  --navy-light: #1a2f5c;
+  --navy-deep: #020b1c;
+  --navy-base: #040f27;
+  --navy-mid: #071535;
+  --navy-light: #0d2150;
   --text-white: #ffffff;
 }
 
 body {
-  background-color: var(--navy-deep);
-  color: var(--text-white);
+  background-color: #ffffff;
+  color: #1a1a1a;
   margin: 0;
   padding: 0;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 
 /* Swoosh / diagonal-streaks background */

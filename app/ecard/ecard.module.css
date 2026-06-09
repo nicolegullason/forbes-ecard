@@ -1,0 +1,508 @@
+/* ── Forbes Health ECard — clean vCard format ── */
+
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px 80px;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Logo ── */
+.logo {
+  width: 200px;
+  max-width: 60vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 32px;
+  filter: brightness(0) opacity(0.8);
+}
+
+/* ── Card ── */
+.card {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 40px 32px 48px;
+}
+
+/* ── Photo ── */
+.photoWrap {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e0e0e0;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ── Name ── */
+.name {
+  margin: 24px 0 0;
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 5.5vw, 34px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #111111;
+  line-height: 1.2;
+}
+.credentials {
+  margin-top: 4px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888888;
+  font-weight: 400;
+}
+.rule {
+  width: 40px;
+  height: 2px;
+  background: #cccccc;
+  margin: 18px auto 0;
+}
+.specialties {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #666666;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #999999;
+  margin: 0 10px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  margin: 28px 0 0;
+}
+
+/* ── Contact sections ── */
+.section {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.sectionLabel {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+}
+.sectionValue {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sectionValue:hover { color: #555555; }
+.sectionSmall {
+  font-size: 13px;
+  color: #888888;
+  font-weight: 400;
+}
+
+/* ── Save button ── */
+.saveBtn {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 44px;
+  border: 1.5px solid #cccccc;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+.saveBtn svg { width: 14px; height: 14px; }
+.saveBtn:hover {
+  background: #f5f5f5;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+
+/* ── Pills ── */
+.pills {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #dddddd;
+  background: #fafafa;
+  color: #555555;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+}
+.pill svg { width: 12px; height: 12px; }
+.pill:hover {
+  background: #f0f0f0;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+
+/* ── Navigation buttons (ecard → subpages) ── */
+.navBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 28px;
+}
+.navBtn {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #fafafa;
+  color: #333333;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.navBtn:hover {
+  background: #f0f0f0;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+
+/* ── Section headers ── */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin-top: 44px;
+}
+.sectionHeaderLine {
+  flex: 1;
+  height: 1px;
+  background: #eeeeee;
+}
+.sectionHeaderLabel {
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+  white-space: nowrap;
+}
+.subsectionHeader {
+  width: 100%;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 4px;
+}
+
+/* ── Body text ── */
+.bodyText {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #666666;
+  font-weight: 400;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* ── Service cards ── */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: 18px;
+}
+.serviceCard {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 18px 16px;
+  text-align: left;
+}
+.serviceTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.serviceList li {
+  font-size: 13px;
+  color: #555555;
+  font-weight: 400;
+  padding-left: 14px;
+  position: relative;
+}
+.serviceList li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #aaaaaa;
+}
+.serviceText {
+  font-size: 13px;
+  color: #555555;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── CTA button ── */
+.ctaBtn {
+  margin-top: 24px;
+  display: inline-block;
+  padding: 13px 36px;
+  border: 1.5px solid #cccccc;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.ctaBtn:hover {
+  background: #f5f5f5;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+
+/* ── Referral ── */
+.referralList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+  width: 100%;
+}
+.referralItem {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  margin: 0;
+}
+.referralContact {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.referralNote {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #aaaaaa;
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── Maps ── */
+.mapWrap {
+  width: 100%;
+  margin-top: 24px;
+}
+.mapLabel {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.mapFrame {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+.mapFrame iframe { display: block; width: 100%; border: none; }
+.mapLink {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888888;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.mapLink:hover { color: #333333; }
+
+/* ── Back link (subpages) ── */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888888;
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.backLink:hover { color: #333333; }
+
+/* ── Sub-nav ── */
+.subNav {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.subNavLabel {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cccccc;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+}
+.subNavLinks {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.subNavLink {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888888;
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid #eeeeee;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.subNavLink:hover {
+  color: #333333;
+  border-color: #cccccc;
+  background: #f5f5f5;
+}
+
+/* ── Footer / Toast ── */
+.footer {
+  margin-top: 44px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cccccc;
+  font-family: var(--font-body), 'Montserrat', sans-serif;
+}
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(16px);
+  background: #222222;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.toastShow { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .page { padding: 32px 12px 60px; }
+  .logo { width: 160px; }
+  .serviceGrid { grid-template-columns: 1fr; }
+  .name { font-size: 24px; }
+  .sectionValue { font-size: 15px; }
+  .saveBtn { padding: 12px 28px; }
+  .photoWrap { width: 128px; height: 128px; }
+  .card { padding: 32px 20px 40px; }
+}
