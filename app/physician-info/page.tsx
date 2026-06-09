@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 export default function PhysicianInfo() {
   return (
     <div className={styles.page}>
-      <Image src="/logo-white.png" alt="Forbes Health" width={4250} height={2125} className={styles.logo} priority />
-
       <div className={styles.card}>
         <Link href="/" className={styles.backLink}>← Back to ECard</Link>
 
@@ -157,6 +155,7 @@ export default function PhysicianInfo() {
         </div>
       </div>
 
+      <Image src="/logo-white.png" alt="Forbes Health" width={4250} height={2125} className={styles.logo} priority />
       <div className={styles.footer}>Forbes Health &nbsp;·&nbsp; {new Date().getFullYear()}</div>
     </div>
   );

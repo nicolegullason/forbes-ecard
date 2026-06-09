@@ -62,8 +62,6 @@ export default function ECardClient() {
 
   return (
     <div className={styles.page}>
-      <Image src="/logo-white.png" alt="Forbes Health" width={4250} height={2125} className={styles.logo} priority unoptimized />
-
       <div className={styles.card}>
 
         {/* ── Headshot ── */}
@@ -136,6 +134,7 @@ export default function ECardClient() {
         </div>
       </div>
 
+      <Image src="/logo-white.png" alt="Forbes Health" width={4250} height={2125} className={styles.logo} priority unoptimized />
       <div className={styles.footer}>Forbes Health &nbsp;·&nbsp; {new Date().getFullYear()}</div>
       <div className={`${styles.toast} ${msg ? styles.toastShow : ""}`}>{msg ?? ""}</div>
     </div>

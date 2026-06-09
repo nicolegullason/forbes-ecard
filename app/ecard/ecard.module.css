@@ -1,24 +1,24 @@
-/* ── Forbes Health ECard — clean vCard format ── */
+/* ── Forbes Health ECard — single-color navy ── */
 
 .page {
   min-height: 100vh;
-  background: #ffffff;
+  background: #1a2d4a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 48px 20px 80px;
-  color: #1a1a1a;
+  padding: 48px 20px 60px;
+  color: #e8f0f8;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ── Logo ── */
 .logo {
-  width: 200px;
-  max-width: 60vw;
+  width: 180px;
+  max-width: 55vw;
   height: auto;
   display: block;
-  margin: 0 auto 32px;
-  filter: brightness(0) opacity(0.8);
+  margin: 40px auto 12px;
+  opacity: 0.65;
 }
 
 /* ── Card ── */
@@ -29,11 +29,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  padding: 40px 32px 48px;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  padding: 0 32px;
 }
 
 /* ── Photo ── */
@@ -42,9 +42,9 @@
   height: 148px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #e0e0e0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
-  background: #f0f0f0;
+  background: rgba(255, 255, 255, 0.08);
 }
 .photo {
   width: 100%;
@@ -60,7 +60,7 @@
   font-size: clamp(26px, 5.5vw, 34px);
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #111111;
+  color: #ffffff;
   line-height: 1.2;
 }
 .credentials {
@@ -68,20 +68,20 @@
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #888888;
+  color: #7899b8;
   font-weight: 400;
 }
 .rule {
   width: 40px;
-  height: 2px;
-  background: #cccccc;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
   margin: 18px auto 0;
 }
 .specialties {
   margin-top: 14px;
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: #666666;
+  color: #8baabf;
   line-height: 1.8;
   font-weight: 400;
 }
@@ -90,15 +90,14 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #999999;
+  background: rgba(255, 255, 255, 0.3);
   margin: 0 10px;
   vertical-align: middle;
-  opacity: 0.8;
 }
 .divider {
   width: 100%;
   height: 1px;
-  background: #eeeeee;
+  background: rgba(255, 255, 255, 0.1);
   margin: 28px 0 0;
 }
 
@@ -114,21 +113,21 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #999999;
+  color: #6b8baa;
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .sectionValue {
   font-size: 17px;
   font-weight: 400;
-  color: #1a1a1a;
+  color: #dde9f4;
   letter-spacing: 0.01em;
   text-decoration: none;
   transition: color 0.2s;
 }
-.sectionValue:hover { color: #555555; }
+.sectionValue:hover { color: #ffffff; }
 .sectionSmall {
   font-size: 13px;
-  color: #888888;
+  color: #7899b8;
   font-weight: 400;
 }
 
@@ -139,10 +138,10 @@
   align-items: center;
   gap: 8px;
   padding: 13px 44px;
-  border: 1.5px solid #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px;
-  background: #ffffff;
-  color: #333333;
+  background: rgba(255, 255, 255, 0.06);
+  color: #dde9f4;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 11px;
@@ -153,9 +152,9 @@
 }
 .saveBtn svg { width: 14px; height: 14px; }
 .saveBtn:hover {
-  background: #f5f5f5;
-  border-color: #aaaaaa;
-  color: #111111;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
 }
 
 /* ── Pills ── */
@@ -172,9 +171,9 @@
   gap: 6px;
   padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid #dddddd;
-  background: #fafafa;
-  color: #555555;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #94b0c8;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -186,9 +185,9 @@
 }
 .pill svg { width: 12px; height: 12px; }
 .pill:hover {
-  background: #f0f0f0;
-  border-color: #aaaaaa;
-  color: #111111;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
 }
 
 /* ── Navigation buttons (ecard → subpages) ── */
@@ -203,10 +202,10 @@
   display: block;
   width: 100%;
   padding: 15px 24px;
-  border: 1px solid #dddddd;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  background: #fafafa;
-  color: #333333;
+  background: rgba(255, 255, 255, 0.06);
+  color: #dde9f4;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -216,9 +215,9 @@
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .navBtn:hover {
-  background: #f0f0f0;
-  border-color: #aaaaaa;
-  color: #111111;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
 }
 
 /* ── Section headers ── */
@@ -232,13 +231,13 @@
 .sectionHeaderLine {
   flex: 1;
   height: 1px;
-  background: #eeeeee;
+  background: rgba(255, 255, 255, 0.1);
 }
 .sectionHeaderLabel {
   font-size: 10px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #999999;
+  color: #6b8baa;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   white-space: nowrap;
 }
@@ -247,7 +246,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #5a7a96;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 28px;
@@ -259,7 +258,7 @@
   margin-top: 18px;
   font-size: 14px;
   line-height: 1.75;
-  color: #666666;
+  color: #8baabf;
   font-weight: 400;
   text-align: center;
   max-width: 400px;
@@ -274,8 +273,8 @@
   margin-top: 18px;
 }
 .serviceCard {
-  background: #fafafa;
-  border: 1px solid #eeeeee;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 18px 16px;
   text-align: left;
@@ -283,7 +282,7 @@
 .serviceTitle {
   font-size: 12px;
   font-weight: 700;
-  color: #222222;
+  color: #dde9f4;
   text-align: center;
   margin-bottom: 12px;
   letter-spacing: 0.04em;
@@ -299,7 +298,7 @@
 }
 .serviceList li {
   font-size: 13px;
-  color: #555555;
+  color: #8baabf;
   font-weight: 400;
   padding-left: 14px;
   position: relative;
@@ -308,11 +307,11 @@
   content: "·";
   position: absolute;
   left: 0;
-  color: #aaaaaa;
+  color: rgba(255, 255, 255, 0.3);
 }
 .serviceText {
   font-size: 13px;
-  color: #555555;
+  color: #8baabf;
   font-weight: 400;
   line-height: 1.65;
   margin: 0;
@@ -323,10 +322,10 @@
   margin-top: 24px;
   display: inline-block;
   padding: 13px 36px;
-  border: 1.5px solid #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px;
-  background: #ffffff;
-  color: #333333;
+  background: rgba(255, 255, 255, 0.06);
+  color: #dde9f4;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -336,9 +335,9 @@
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .ctaBtn:hover {
-  background: #f5f5f5;
-  border-color: #aaaaaa;
-  color: #111111;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
 }
 
 /* ── Referral ── */
@@ -351,13 +350,13 @@
 }
 .referralItem {
   font-size: 14px;
-  color: #555555;
+  color: #8baabf;
   font-weight: 400;
   text-align: center;
   padding: 10px 16px;
   border-radius: 6px;
-  background: #fafafa;
-  border: 1px solid #eeeeee;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0;
 }
 .referralContact {
@@ -370,7 +369,7 @@
 .referralNote {
   margin-top: 14px;
   font-size: 12px;
-  color: #aaaaaa;
+  color: #5a7a96;
   font-weight: 400;
   text-align: center;
   font-style: italic;
@@ -385,7 +384,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #999999;
+  color: #6b8baa;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   margin-bottom: 10px;
   text-align: center;
@@ -394,8 +393,8 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #eeeeee;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 .mapFrame iframe { display: block; width: 100%; border: none; }
 .mapLink {
@@ -403,12 +402,12 @@
   text-align: center;
   margin-top: 8px;
   font-size: 12px;
-  color: #888888;
+  color: #6b8baa;
   text-decoration: none;
   letter-spacing: 0.04em;
   transition: color 0.2s;
 }
-.mapLink:hover { color: #333333; }
+.mapLink:hover { color: #dde9f4; }
 
 /* ── Back link (subpages) ── */
 .backLink {
@@ -418,12 +417,12 @@
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #888888;
+  color: #6b8baa;
   text-decoration: none;
   margin-bottom: 28px;
   transition: color 0.2s;
 }
-.backLink:hover { color: #333333; }
+.backLink:hover { color: #dde9f4; }
 
 /* ── Sub-nav ── */
 .subNav {
@@ -438,7 +437,7 @@
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.2);
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .subNavLinks {
@@ -451,27 +450,27 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #888888;
+  color: #6b8baa;
   text-decoration: none;
   padding: 7px 16px;
   border-radius: 999px;
-  border: 1px solid #eeeeee;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   font-weight: 600;
   transition: all 0.2s;
 }
 .subNavLink:hover {
-  color: #333333;
-  border-color: #cccccc;
-  background: #f5f5f5;
+  color: #dde9f4;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 /* ── Footer / Toast ── */
 .footer {
-  margin-top: 44px;
+  margin-top: 16px;
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.2);
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .toast {
@@ -479,8 +478,8 @@
   left: 50%;
   bottom: 28px;
   transform: translateX(-50%) translateY(16px);
-  background: #222222;
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a2d4a;
   padding: 10px 20px;
   border-radius: 999px;
   font-size: 11px;
@@ -491,18 +490,18 @@
   pointer-events: none;
   transition: opacity 0.25s, transform 0.25s;
   z-index: 100;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 .toastShow { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ── Responsive ── */
 @media (max-width: 520px) {
-  .page { padding: 32px 12px 60px; }
-  .logo { width: 160px; }
+  .page { padding: 32px 12px 48px; }
+  .logo { width: 150px; }
   .serviceGrid { grid-template-columns: 1fr; }
   .name { font-size: 24px; }
   .sectionValue { font-size: 15px; }
   .saveBtn { padding: 12px 28px; }
   .photoWrap { width: 128px; height: 128px; }
-  .card { padding: 32px 20px 40px; }
+  .card { padding: 0 20px; }
 }
