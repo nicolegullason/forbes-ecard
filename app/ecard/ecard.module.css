@@ -1,13 +1,13 @@
-/* ── Forbes Health ECard — single-color navy ── */
+/* ── Forbes Health ECard — light medical blue ── */
 
 .page {
   min-height: 100vh;
-  background: #1a2d4a;
+  background: linear-gradient(160deg, #D9EAF7 0%, #BFDFF2 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 48px 20px 60px;
-  color: #e8f0f8;
+  color: #1F2E3D;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -18,7 +18,8 @@
   height: auto;
   display: block;
   margin: 40px auto 12px;
-  opacity: 0.65;
+  opacity: 0.55;
+  filter: brightness(0);
 }
 
 /* ── Card ── */
@@ -29,11 +30,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: transparent;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  padding: 0 32px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid rgba(46, 111, 158, 0.1);
+  box-shadow: 0 20px 50px rgba(46, 111, 158, 0.14), 0 2px 8px rgba(46, 111, 158, 0.08);
+  padding: 40px 32px 48px;
 }
 
 /* ── Photo ── */
@@ -42,9 +43,9 @@
   height: 148px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(46, 111, 158, 0.25);
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(46, 111, 158, 0.06);
 }
 .photo {
   width: 100%;
@@ -60,7 +61,7 @@
   font-size: clamp(26px, 5.5vw, 34px);
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #ffffff;
+  color: #2E6F9E;
   line-height: 1.2;
 }
 .credentials {
@@ -68,20 +69,20 @@
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #7899b8;
+  color: #547e9c;
   font-weight: 400;
 }
 .rule {
   width: 40px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(46, 111, 158, 0.3);
   margin: 18px auto 0;
 }
 .specialties {
   margin-top: 14px;
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: #8baabf;
+  color: #3d5064;
   line-height: 1.8;
   font-weight: 400;
 }
@@ -90,14 +91,14 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(46, 111, 158, 0.35);
   margin: 0 10px;
   vertical-align: middle;
 }
 .divider {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(46, 111, 158, 0.14);
   margin: 28px 0 0;
 }
 
@@ -113,21 +114,21 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #6b8baa;
+  color: #547e9c;
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .sectionValue {
   font-size: 17px;
   font-weight: 400;
-  color: #dde9f4;
+  color: #1F2E3D;
   letter-spacing: 0.01em;
   text-decoration: none;
   transition: color 0.2s;
 }
-.sectionValue:hover { color: #ffffff; }
+.sectionValue:hover { color: #2E6F9E; }
 .sectionSmall {
   font-size: 13px;
-  color: #7899b8;
+  color: #3d5064;
   font-weight: 400;
 }
 
@@ -138,10 +139,10 @@
   align-items: center;
   gap: 8px;
   padding: 13px 44px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid #2E6F9E;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #dde9f4;
+  background: #2E6F9E;
+  color: #ffffff;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 11px;
@@ -152,8 +153,8 @@
 }
 .saveBtn svg { width: 14px; height: 14px; }
 .saveBtn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: #24597f;
+  border-color: #24597f;
   color: #ffffff;
 }
 
@@ -171,9 +172,9 @@
   gap: 6px;
   padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.06);
-  color: #94b0c8;
+  border: 1px solid rgba(46, 111, 158, 0.25);
+  background: rgba(46, 111, 158, 0.05);
+  color: #2E6F9E;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -185,9 +186,9 @@
 }
 .pill svg { width: 12px; height: 12px; }
 .pill:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
-  color: #ffffff;
+  background: rgba(46, 111, 158, 0.12);
+  border-color: rgba(46, 111, 158, 0.45);
+  color: #24597f;
 }
 
 /* ── Navigation buttons (ecard → subpages) ── */
@@ -202,10 +203,10 @@
   display: block;
   width: 100%;
   padding: 15px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(46, 111, 158, 0.3);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #dde9f4;
+  background: rgba(46, 111, 158, 0.05);
+  color: #2E6F9E;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -215,9 +216,9 @@
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .navBtn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
-  color: #ffffff;
+  background: rgba(46, 111, 158, 0.12);
+  border-color: rgba(46, 111, 158, 0.5);
+  color: #24597f;
 }
 
 /* ── Section headers ── */
@@ -231,13 +232,13 @@
 .sectionHeaderLine {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(46, 111, 158, 0.18);
 }
 .sectionHeaderLabel {
   font-size: 10px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #6b8baa;
+  color: #2E6F9E;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   white-space: nowrap;
 }
@@ -246,7 +247,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #5a7a96;
+  color: #3d5064;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 28px;
@@ -258,7 +259,7 @@
   margin-top: 18px;
   font-size: 14px;
   line-height: 1.75;
-  color: #8baabf;
+  color: #2c3b4c;
   font-weight: 400;
   text-align: center;
   max-width: 400px;
@@ -273,8 +274,8 @@
   margin-top: 18px;
 }
 .serviceCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FAFCFE;
+  border: 1px solid rgba(46, 111, 158, 0.14);
   border-radius: 10px;
   padding: 18px 16px;
   text-align: left;
@@ -282,7 +283,7 @@
 .serviceTitle {
   font-size: 12px;
   font-weight: 700;
-  color: #dde9f4;
+  color: #2E6F9E;
   text-align: center;
   margin-bottom: 12px;
   letter-spacing: 0.04em;
@@ -298,7 +299,7 @@
 }
 .serviceList li {
   font-size: 13px;
-  color: #8baabf;
+  color: #2c3b4c;
   font-weight: 400;
   padding-left: 14px;
   position: relative;
@@ -307,11 +308,11 @@
   content: "·";
   position: absolute;
   left: 0;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(46, 111, 158, 0.5);
 }
 .serviceText {
   font-size: 13px;
-  color: #8baabf;
+  color: #2c3b4c;
   font-weight: 400;
   line-height: 1.65;
   margin: 0;
@@ -322,10 +323,10 @@
   margin-top: 24px;
   display: inline-block;
   padding: 13px 36px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid #2E6F9E;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #dde9f4;
+  background: #2E6F9E;
+  color: #ffffff;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -335,8 +336,8 @@
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .ctaBtn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: #24597f;
+  border-color: #24597f;
   color: #ffffff;
 }
 
@@ -350,13 +351,13 @@
 }
 .referralItem {
   font-size: 14px;
-  color: #8baabf;
+  color: #2c3b4c;
   font-weight: 400;
   text-align: center;
   padding: 10px 16px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FAFCFE;
+  border: 1px solid rgba(46, 111, 158, 0.14);
   margin: 0;
 }
 .referralContact {
@@ -369,7 +370,7 @@
 .referralNote {
   margin-top: 14px;
   font-size: 12px;
-  color: #5a7a96;
+  color: #547e9c;
   font-weight: 400;
   text-align: center;
   font-style: italic;
@@ -384,7 +385,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #6b8baa;
+  color: #2E6F9E;
   font-family: var(--font-body), 'Montserrat', sans-serif;
   margin-bottom: 10px;
   text-align: center;
@@ -393,8 +394,8 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(46, 111, 158, 0.16);
+  box-shadow: 0 4px 16px rgba(46, 111, 158, 0.12);
 }
 .mapFrame iframe { display: block; width: 100%; border: none; }
 .mapLink {
@@ -402,12 +403,12 @@
   text-align: center;
   margin-top: 8px;
   font-size: 12px;
-  color: #6b8baa;
+  color: #547e9c;
   text-decoration: none;
   letter-spacing: 0.04em;
   transition: color 0.2s;
 }
-.mapLink:hover { color: #dde9f4; }
+.mapLink:hover { color: #2E6F9E; }
 
 /* ── Back link (subpages) ── */
 .backLink {
@@ -417,12 +418,12 @@
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b8baa;
+  color: #2E6F9E;
   text-decoration: none;
   margin-bottom: 28px;
   transition: color 0.2s;
 }
-.backLink:hover { color: #dde9f4; }
+.backLink:hover { color: #24597f; }
 
 /* ── Sub-nav ── */
 .subNav {
@@ -437,7 +438,7 @@
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(46, 111, 158, 0.4);
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .subNavLinks {
@@ -450,18 +451,18 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #6b8baa;
+  color: #2E6F9E;
   text-decoration: none;
   padding: 7px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(46, 111, 158, 0.22);
   font-weight: 600;
   transition: all 0.2s;
 }
 .subNavLink:hover {
-  color: #dde9f4;
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.07);
+  color: #24597f;
+  border-color: rgba(46, 111, 158, 0.45);
+  background: rgba(46, 111, 158, 0.07);
 }
 
 /* ── Footer / Toast ── */
@@ -470,7 +471,7 @@
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(46, 111, 158, 0.4);
   font-family: var(--font-body), 'Montserrat', sans-serif;
 }
 .toast {
@@ -478,8 +479,8 @@
   left: 50%;
   bottom: 28px;
   transform: translateX(-50%) translateY(16px);
-  background: rgba(255, 255, 255, 0.95);
-  color: #1a2d4a;
+  background: #2E6F9E;
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 999px;
   font-size: 11px;
@@ -490,7 +491,7 @@
   pointer-events: none;
   transition: opacity 0.25s, transform 0.25s;
   z-index: 100;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(46, 111, 158, 0.3);
 }
 .toastShow { opacity: 1; transform: translateX(-50%) translateY(0); }
 
@@ -503,5 +504,5 @@
   .sectionValue { font-size: 15px; }
   .saveBtn { padding: 12px 28px; }
   .photoWrap { width: 128px; height: 128px; }
-  .card { padding: 0 20px; }
+  .card { padding: 32px 20px 40px; }
 }
